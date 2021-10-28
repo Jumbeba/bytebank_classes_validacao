@@ -3,8 +3,10 @@ from CPF_CNPJ import CpfCnpj
 # cpf_um = Cpf("01234567890")
 # print(cpf_um)
 
-exemplo_cnpj = "81994337000263"
+exemplo_cnpj = "81994337000163"
+exemplo_cpf = "43473283035"
 # cnpj = CNPJ()
 # print(cnpj.validate(exemplo_cnpj))
-documento = CpfCnpj(exemplo_cnpj, 'cnpj')
+documento = CpfCnpj(exemplo_cpf, 'cpf')
 
+print(documento)
