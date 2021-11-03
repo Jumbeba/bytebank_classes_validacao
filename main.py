@@ -1,6 +1,14 @@
-from datetime import datetime, timedelta
-from datas_br import DatasBr
+import requests
+from acesso_cep import BuscaEndereco
 
-hoje = DatasBr()
+cep = 59296470
+objeto_cep = BuscaEndereco(cep)
+print(objeto_cep)
 
-print(hoje.tempo_cadastro())
+# r = requests.get("https://viacep.com.br/ws/59296470/json/")
+# print(type(r.text))
+
+logradouro, bairro, cidade, uf = objeto_cep.acessa_via_cep()
+
+print(logradouro, bairro, cidade, uf)
+
